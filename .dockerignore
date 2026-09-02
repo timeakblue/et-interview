@@ -1,0 +1,22 @@
+.git/
+.gitignore
+.idea/
+.vscode/
+
+# Build outputs — rebuilt inside the image
+backend/et-interview
+frontend/node_modules/
+frontend/dist/
+
+# Local tooling state
+.devbox/
+devbox.json
+devbox.lock
+
+# Environment
+.env
+.env.*
+
+Dockerfile
+.dockerignore
+*.md

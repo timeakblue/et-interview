@@ -1,0 +1,53 @@
+# --- Go ---------------------------------------------------------------
+# Compiled binary (module name: et-interview)
+/backend/et-interview
+
+# Binaries and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# SQLite database (the DB_CONN default) and its WAL sidecars
+qc.db
+qc.db-shm
+qc.db-wal
+
+# Test binaries and coverage output
+*.test
+*.out
+coverage.txt
+
+# Go workspace files
+go.work
+go.work.sum
+
+# Dependency directory (uncomment if you vendor)
+# vendor/
+
+# --- Node / frontend --------------------------------------------------
+# See frontend/.gitignore for the rest
+node_modules/
+dist/
+
+# --- Tooling ----------------------------------------------------------
+# devbox local state
+.devbox/
+
+# --- Environment ------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# --- Editors ----------------------------------------------------------
+/.idea/
+.vscode/
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# --- OS ---------------------------------------------------------------
+.DS_Store
+Thumbs.db

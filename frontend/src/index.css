@@ -1,0 +1,24 @@
+/* MUI's CssBaseline handles the reset; this covers what sits outside React. */
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  font-size: 0.9em;
+}
+
+/* Numeric data keeps columns aligned. */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
