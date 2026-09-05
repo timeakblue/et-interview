@@ -4,14 +4,12 @@ import (
 	"context"
 	"fmt"
 	"log/slog"
-
-	"et-interview/internal/db"
-	"et-interview/internal/demo"
+        "et-interview/internal/db"
+	
 )
 
 type Wires struct {
 	DB      db.DB
-	Demo    demo.Store
 	WebRoot string
 }
 
@@ -28,7 +26,7 @@ func WireUp(ctx context.Context, conf Config) (w Wires, err error) {
 		return
 	}
 
-	w.Demo = demo.NewStore(w.DB)
+	//w.Demo = demo.NewStore(w.DB)
 	w.WebRoot = conf.WebRoot
 	return
 }
