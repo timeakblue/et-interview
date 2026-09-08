@@ -26,3 +26,22 @@ func TestImportFileReportsMissingPath(t *testing.T) {
 		t.Errorf("error %q does not mention the path %q", err, missing)
 	}
 }
+
+func TestParseReadingRowRejectsBadDecay(t *testing.T) {
+	row := make([]string, 30)
+	for i := range row {
+		row[i] = "1"
+	}
+	row[0], row[1] = "line-a-r00001", "line-a"
+	row[2], row[6], row[10], row[14] = "e1", "e2", "e3", "e4"
+	row[18], row[19] = "2026-08-17T00:00:00Z", "dipole-dipole"
+	row[28] = "0.1;0.2;0.3" // only 3 gates
+
+	_, reason := parseReadingRow(row)
+	if reason == "" {
+		t.Fatal("expected rejection for short decay_curve")
+	}
+	if !strings.Contains(reason, "10 gates") {
+		t.Errorf("reason %q should mention 10 gates", reason)
+	}
+}
