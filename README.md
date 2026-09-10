@@ -1,7 +1,8 @@
 # ExploreTech Full Stack Interview
 
-Thank you for taking the time to interview with ExploreTech!
-
+-feedback Breaking down the commits and the frontend components into more manageable pieces would have gone a long way in facilitating effective communication and collaboration, which is critical in this role. 
+possible one PR-sized idea per commit; one visible UI concern per file.
+--Thank you for taking the time to interview with ExploreTech!
 Please don't spend more than 2 hours on this take-home exercise.
 
 Try to push your submission 24 hours before your live interview
